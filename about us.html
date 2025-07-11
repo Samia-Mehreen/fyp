@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+:root {
+  --skyblue: #87ceeb;
+  --seagreen: #2e8b57;
+  --white: #ffffff;
+  --dark: #003f3f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+/* Header */
+header {
+  background: var(--skyblue);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+  background-size: cover;
+  background-position: center;
+  color: #003366;
+  text-align: center;
+
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* About Content Section */
+.about-content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 30px;
+      border-bottom: 4px solid #ffc107;
+      display: inline-block;
+      padding-bottom: 10px;
+      position: relative;
+      text-decoration: none;
+}
+
+.about-content p {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about-content ul {
+  text-align: center;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  line-height: 1.6;
+}
+
+/* Our Crew Section */
+.crew-section {
+  padding: 1rem 1rem;
+  text-align: center;
+  background-color: #f0fdfc;
+}
+
+.crew-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+    font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 30px;
+      border-bottom: 4px solid #ffc107;
+      display: inline-block;
+      padding-bottom: 10px;
+      position: relative;
+     text-decoration: none;
+}
+
+.crew-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.crew-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.crew-card:hover {
+  transform: translateY(-5px);
+}
+
+.crew-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.crew-card h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--dark);
+}
+
+.crew-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+ .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 30px;
+      border-bottom: 4px solid #ffc107;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 500px;
+      border: 5px solid skyblue;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .map-container {
+        height: 350px;
+      }
+    }
+/* Footer */
+.footer {
+  background-color: skyblue;
+  color: white;
+  padding: 3rem 2rem 1rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h3, .footer h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-about p,
+.footer-newsletter p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a,
+.footer-social a {
+  color:white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.footer-links ul li a:hover,
+.footer-social a:hover {
+  color: rgb(6, 172, 238);
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-newsletter input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.footer-newsletter button {
+  background-color: rgb(11, 35, 141);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #ffffff;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+/* Fade-In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+</style>
+
+</head>
+<body>
+    <header>
+    <div class="logo"><img src="freepik-flat-gradient-boat-and-wave-transport-logo-202507111116126suf-removebg-preview.png" alt=""  width="170px" height="170px"></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="contact page.html">Contact</a></li>
+        <li><a href="about us.html">About us</a></li>
+        <li><a href="g.html">Gallery</a></li>
+        <li><a href="testimonial.html">Testimonials</a></li>
+        <li><a href="signup.html">Sign up</a></li>
+        <li>
+          <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Hero -->
+  <section class="hero fade-in" style="background-image: url('mathyas-kurmann-jnHQsTfq2Og-unsplash.jpg');">
+    <h1>About MarinaFleet</h1>
+    <p>Luxury, adventurous, and trusted service on every voyage. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, voluptatum. Sunt tempore molestias commodi, esse labore exercitationem rerum</p>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-content fade-in">
+    <h2>Our Story</h2>
+    <p>Founded in 2015, MarinaFleet has grown from a small seaside operation into a premier luxury charter provider. We pride ourselves on creating unforgettable experiences at sea for families, couples, and businesses alike.</p>
+
+    <h2>What We Offer</h2>
+   <div>
+   <p> High-end yachts, sailboats, ferries, and speedboats</p>
+    <p>Flexible rental plans for events or private cruises</p>
+    <p>Experienced crew and world-class hospitality</p>
+    <p>Top-rated safety standards and seamless booking</p>
+   </div>
+
+    <h2>Our Mission</h2>
+    <p>To make every journey with MarinaFleet a luxurious escape — blending comfort, adventure, and trusted service on every wave.</p>
+  </section>
+
+  <!-- Our Crew Section -->
+  <section class="crew-section fade-in">
+    <h2>Meet Our Crew</h2>
+    <div class="crew-cards">
+      <div class="crew-card">
+        <img src="karla-car-58AiTToabyE-unsplash.jpg" alt="Mustafa">
+        <h3>Mustafa</h3>
+        <p>Chief Captain with 20+ years of sailing experience worldwide.</p>
+      </div>
+      <div class="crew-card">
+        <img src="murat-ilik-Ji20BznLKCM-unsplash.jpg" alt="Abdul Rehman">
+        <h3>Abdul Rehman</h3>
+        <p>Marine engineer ensuring your voyage is safe and smooth.</p>
+      </div>
+      <div class="crew-card">
+        <img src="giang-hoang-Al181qEmLvc-unsplash.jpg" alt="Zubair">
+        <h3>Zubair</h3>
+        <p>Lead Host offering luxury service and unforgettable hospitality.</p>
+      </div>
+       <div class="crew-card">
+        <img src="lakshmi-narasimha-lk7fFQnPMrM-unsplash.jpg" alt="Ahsan">
+        <h3>Ahsan</h3>
+        <p>Lead Host offering luxury service and unforgettable hospitality.</p>
+      </div>
+       <div class="crew-card">
+        <img src="alex-ghiurau-ws1CBAlYErg-unsplash.jpg" alt="Shiekh Ali Haider">
+        <h3>Shiekh Ali Haider</h3>
+        <p>Lead Host offering luxury service and unforgettable hospitality.</p>
+      </div>
+    </div>
+  </section>
+<div class="container">
+    <h1>Our Location</h1>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28904.273973969644!2d67.0218959!3d24.8607345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33eaccacf04f3%3A0xf2f36f327c73b180!2sKarachi%20Harbour!5e0!3m2!1sen!2s!4v1719450050015" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Footer -->
+   <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>MarinaFleet</h3>
+      <p>Your gateway to luxury on the open seas. Charter yachts, sailboats, and speedboats with ease.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="landingpage.html">Home</a></li>
+        <li><a href="g.html">Fleet</a></li>
+        <li><a href="contact page.html">Contact</a></li>
+        <li><a href="about us.html">About us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><img src="facebook.png" alt="" height="20px" width="20px"> Facebook</a>
+        <a href="https://www.instagram.com/"><img src="instagram.png" alt="" height="20px" width="20px"> Instagram</a>
+        <a href="https://x.com/"><img src="twitter.png" alt="" height="20px" width="20px"> Twitter</a>
+      </div>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get updates on new yachts, offers, and news.</p>
+      <form>
+        <input type="email" placeholder="Your email" required />
+        <button type="submit" class="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 MarinaFleet. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

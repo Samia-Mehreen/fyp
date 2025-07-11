@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marina Fleet</title>
+  <link rel="stylesheet" href="page.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="freepik-flat-gradient-boat-and-wave-transport-logo-202507111116126suf-removebg-preview.png" alt=""  width="170px" height="170px"></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="contact page.html">Contact</a></li>
+        <li><a href="about us.html">About us</a></li>
+        <li><a href="g.html">Gallery</a></li>
+        <li><a href="testimonial.html">Testimonials</a></li>
+        <li><a href="signup.html">Sign up</a></li>
+        <li>
+          <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero fade-in">
+    <h1>Explore the Open Waters</h1>
+    <p>Luxury yachts and boats at your service</p>
+    <button onclick="scrollToFleet()">View Fleet</button>
+  </section>
+
+  <section id="fleet" class="fleet fade-in">
+    <h1>OUR FLEETS</h1><br>
+    <h2>Luxuries</h2><br>
+    <div class="fleet-cards">
+      <div class="card" data-boat="Luxury Yacht">
+        <img src="marcin-ciszewski-Zexjl0v3MRU-unsplash.jpg" alt="Yacht" height="300px" />
+        <h3>Luxury Yacht</h3>
+        <p>$2500/day</p>
+         <button class="bttn" onclick="addToCart('Fishing Speedboat', 200)">Add to Cart</button>
+      </div>
+      <div class="card" data-boat="FlybridgeYacht">
+        <img src="pexels-jahoo-382167.jpg" alt="FlybridgeYacht" height="300px"/>
+        <h3>Flybridge Yacht</h3>
+        <p>$1500/day</p>
+         <button class="bttn" onclick="addToCart('Fishing Speedboat', 200)">Add to Cart</button>
+      </div>
+      <div class="card" data-boat="Speedboat">
+        <img src="pexels-matthew-barra-178916-813011.jpg" alt="Semi-displacement yacht" height="300px"/>
+        <h3>Semi-displacement Yacht</h3>
+        <p>$1700/day</p>
+         <button class="bttn" onclick="addToCart('Fishing Speedboat', 200)">Add to Cart</button>
+      </div>
+      <div class="card" data-boat="Classic Motor Yacht">
+        <img src="alexander-nmqFTge_SFU-unsplash - Copy.jpg" alt="Classic Motor Yacht" height="300px"/>
+        <h3>Classic Motor Yacht</h3>
+        <p>$1200/day</p>
+         <button class="bttn" onclick="addToCart('Fishing Speedboat', 200)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="fleet" class="fleet fade-in">
+    <h2>Passenger Ships</h2><br>
+    <div class="fleet-cards">
+      <div class="card" data-boat="Cruiser">
+        <img src="alex-ghiurau-ws1CBAlYErg-unsplash - Copy.jpg" alt="Cruiser" height="300px"/>
+        <h3>Cruiser</h3>
+        <p>$800/day</p>
+         <button class="bttn" onclick="addToCart('Fishing Speedboat', 200)">Add to Cart</button>
+      </div>
+      <div class="card" data-boat="Sailboat">
+        <img src="pexels-pixabay-163236 (1).jpg" alt="Ferries" height="300px"/>
+        <h3>Ferries</h3>
+        <p>$3200/day</p>
+         <button class="bttn" onclick="addToCart('Fishing Speedboat', 200)">Add to Cart</button>
+      </div>
+      <div class="card" data-boat="Tour Boat">
+        <img src="k-adams-wfd1nX0U8MM-unsplash.jpg" alt="Tour Boat" height="300px"/>
+        <h3>Tour Boat</h3>
+        <p>$300/day</p>
+         <button class="bttn" onclick="addToCart('Fishing Speedboat', 200)">Add to Cart</button>
+      </div>
+    
+      <div class="card" data-boat="Ocean Liners">
+        <img src="Queen-Elizabeth-2.jpg" alt="Ocean Liners" height="300px"/>
+        <h3>Ocean Liners</h3>
+        <p>$4000/day</p> 
+         <button class="bttn" onclick="addToCart('Fishing Speedboat', 200)">Add to Cart</button>
+      </div>
+    </div>
+    
+  </section>
+
+  <section id="fleet" class="fleet fade-in">
+      <h2>Speed Boats</h2><br>
+    <div class="fleet-cards">
+      <div class="card" data-boat="CenterConsole Speedboat">
+        <img src="Cover-Valhalla-V-55-1.jpg" alt="speedboats" height="300px"/>
+        <h3>CenterConsole Speedboat</h3>
+        <p>$1200/day</p>
+         <button class="bttn" onclick="addToCart('Fishing Speedboat', 200)">Add to Cart</button>
+      </div>
+      <div class="card" data-boat="Bow rider">
+        <img src="bl-vr5-gallery1.webp" alt="speedboats" height="300px"/>
+        <h3>Bow Rider</h3>
+        <p>$1200/day</p>
+         <button class="bttn" onclick="addToCart('Fishing Speedboat', 200)">Add to Cart</button>
+      </div>
+      <div class="card" data-boat="racing boat">
+        <img src="invincible-46.jpg" alt="speedboat" height="300px"/>
+        <h3>Racing Speedboat</h3>
+        <p>$2000/day</p>
+         <button class="bttn" onclick="addToCart('Fishing Speedboat', 200)">Add to Cart</button>
+      </div>
+      <div class="card" data-boat="Speedboat">
+        <img src="Saturn-FB300-Fishing-Boat__1_.jpg" alt="speedboat" height="300px"/>
+        <h3>Fishing Speedboat</h3>
+        <p>$200/day</p>
+        <button class="bttn" onclick="addToCart('Fishing Speedboat', 200)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>MarinaFleet</h3>
+      <p>Your gateway to luxury on the open seas. Charter yachts, sailboats, and speedboats with ease.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="landingpage.html">Home</a></li>
+        <li><a href="g.html">Fleet</a></li>
+        <li><a href="contact page.html">Contact</a></li>
+        <li><a href="about us.html">About us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><img src="facebook.png" alt="" height="20px" width="20px"> Facebook</a>
+        <a href="https://www.instagram.com/"><img src="instagram.png" alt="" height="20px" width="20px"> Instagram</a>
+        <a href="https://x.com/"><img src="twitter.png" alt="" height="20px" width="20px"> Twitter</a>
+      </div>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get updates on new yachts, offers, and news.</p>
+      <form>
+        <input type="email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 MarinaFleet. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p id="total-price">Total: $0</p>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

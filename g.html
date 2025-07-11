@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fleet Categories</title>
+  <style>
+    :root {
+    --skyblue: #87ceeb;
+    --seagreen: #2e8b57;
+    --white: #ffffff;
+    --dark: #003f3f;}
+
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--white);
+    color: var(--dark);
+  }
+     header {
+    background: var(--skyblue);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--dark);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+  }
+
+    .category {
+      margin-bottom: 50px;
+    }
+
+    .category h2 {
+      font-size: 28px;
+      color: #2c3e50;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .fleet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .fleet-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+      background-size: cover;
+    }
+
+    .fleet-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .fleet-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .fleet-content {
+      padding: 15px;
+      
+    }
+
+    .fleet-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .fleet-details {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .price {
+      color: #27ae60;
+    }
+
+    .rating {
+      color: #f39c12;
+    }
+
+    .book-btn {
+      display: inline-block;
+      background-color: #2980b9;
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .book-btn:hover {
+      background-color: #1c5985;
+    }
+    .footer {
+    background-color: skyblue;
+    color: white;
+    padding: 3rem 2rem 1rem 2rem;
+    margin-top: 4rem;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer h3, .footer h4 {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-about p,
+  .footer-newsletter p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links ul li a,
+  .footer-social a {
+    color:white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+  }
+  
+  .footer-links ul li a:hover,
+  .footer-social a:hover {
+    color: skyblue;
+  }
+  
+  .social-icons a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footer-newsletter input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .footer-newsletter button {
+    background-color: rgb(11, 35, 141);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #ffffff;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    color: #ffffff;
+  }
+
+  </style>
+</head>
+<body>
+<header>
+    <div class="logo"><img src="freepik-flat-gradient-boat-and-wave-transport-logo-202507111116126suf-removebg-preview.png" alt=""  width="170px" height="170px"></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="about us.html">About us</a></li>
+        <li><a href="g.html">Gallery</a></li>
+        <li><a href="testimonial.html">Testimonials</a></li>
+        <li><a href="signup.html">Sign up</a></li>
+        <li>
+          <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="category">
+    <h2>Luxury</h2>
+    <div class="fleet-grid">
+      <div class="fleet-card">
+        <img src="moored-ship-monaco-seaport.jpg" alt="Ocean Pearl">
+        <div class="fleet-content">
+          <div class="fleet-name">Ocean Pearl</div>
+        </div>
+      </div>
+
+    
+      <div class="fleet-card">
+        <img src="alonso-reyes-mG_rp41aYqM-unsplash.jpg" alt="Golden Horizon">
+        <div class="fleet-content">
+          <div class="fleet-name">Golden Horizon</div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <h2>Sailing</h2>
+    <div class="fleet-grid">
+      <div class="fleet-card">
+        <img src="nils-soderman-PQYrz7UWkm8-unsplash.jpg" alt="Wind Chaser">
+        <div class="fleet-content">
+          <div class="fleet-name">Wind Chaser</div>
+        </div>
+      </div>
+
+      <div class="fleet-card">
+        <img src="pexels-jahoo-382167.jpg" alt="Sea Whisper">
+        <div class="fleet-content">
+          <div class="fleet-name">Sea Whisper</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="category">
+    <h2>Fishing</h2>
+    <div class="fleet-grid">
+      <div class="fleet-card">
+        <img src="pexels-souvenirpixels-3989770.jpg" alt="Marlin Master">
+        <div class="fleet-content">
+          <div class="fleet-name">Marlin Master</div>
+        </div>
+      </div>
+
+      <div class="fleet-card">
+        <img src="pexels-agus-66107.jpg" alt="Hooked Up">
+        <div class="fleet-content">
+          <div class="fleet-name">Hooked Up</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>MarinaFleet</h3>
+      <p>Your gateway to luxury on the open seas. Charter yachts, sailboats, and speedboats with ease.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="landingpage.html">Home</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="about us.html">About us</a></li>
+      </ul>
+    </div>
+    
+
+   <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><img src="facebook.png" alt="" height="20px" width="20px"> Facebook</a>
+        <a href="https://www.instagram.com/"><img src="instagram.png" alt="" height="20px" width="20px"> Instagram</a>
+        <a href="https://x.com/"><img src="twitter.png" alt="" height="20px" width="20px"> Twitter</a>
+      </div>
+    </div>
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Get updates on new yachts, offers, and news.</p>
+      <form>
+        <input type="email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 MarinaFleet. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
